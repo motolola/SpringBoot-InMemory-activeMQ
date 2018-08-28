@@ -1,4 +1,4 @@
-package listener;
+package io.motolola.inMemoryactiveMQ.listener;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    @JmsListener(destination = "inMemory.queue")
+    @JmsListener(destination = "inmemory.queue")
     public void listener(String message) {
         System.out.println("Received message: "+ message);
 

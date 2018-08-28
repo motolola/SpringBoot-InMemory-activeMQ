@@ -1,4 +1,4 @@
-package config;
+package io.motolola.inMemoryactiveMQ.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;
@@ -9,11 +9,11 @@ import javax.jms.Queue;
 
 @EnableJms
 @Configuration
-public class Config {
+public class ActiveMQConfig {
 
     @Bean
     public Queue queue()
     {
-        return new ActiveMQQueue("inMemory.queue");
+        return new ActiveMQQueue("inmemory.queue");
     }
 }
